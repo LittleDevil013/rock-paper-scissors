@@ -1,9 +1,17 @@
-const choises = ['rock' , 'paper' , 'scissors'] ;
+const choises = ['rock' , 'paper' , 'scissors'];
 
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 3);
-    return choises[computerChoice];
+    let randomValue = Math.floor(Math.random() * 3);
+    let computerChoice =  choises[randomValue];
+    return computerChoice;
+};
 
-}
 
-console.log(getComputerChoice())
+function getPlayerChoice() {
+   let promptValue =  prompt("Rock , Paper or Scissors?");
+   let playerChoice =  promptValue.toLocaleLowerCase();
+   return playerChoice;
+};
+
+console.log(getComputerChoice());
+console.log(getPlayerChoice());
